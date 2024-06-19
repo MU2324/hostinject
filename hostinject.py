@@ -70,7 +70,7 @@ def detect_vulnerabilities(url, wordlists, attacker, output_file, max_redirects,
                     'Vary' in response.headers and response.headers.get('Vary', '').lower() in ['Origin', 'Accept-Encoding'] or
                     'X-Cache' in response.headers and response.headers.get('X-Cache', '').lower() in ['hit', 'miss']
             ):
-                result = Fore.GREEN + '[Vulnerability] ' + Fore.YELLOW + '[Potencial Web Cache Poisoning] ' + Fore.WHITE + url
+                result = Fore.GREEN + '[Vulnerability] ' + Fore.YELLOW + '[Potential Web Cache Poisoning] ' + Fore.WHITE + url
                 print(result)
                 if output_file:
                     with open(output_file, 'a') as output:
